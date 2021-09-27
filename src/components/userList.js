@@ -5,12 +5,11 @@ import { MdModeEdit } from "react-icons/md";
 import { AiFillDelete } from "react-icons/ai";
 import { deleteUser } from "../Redux/actions/allActions";
 import { Link } from "react-router-dom";
-import "../styles/App.scss";
 const UserList = ({ data, isSelectAll}) => {
   const dispatch = useDispatch();
   const { name, phone, email, id } = data;
   return (
-    <tr>
+    <tr className='userdata-lists'>
       <td>
         <div className="custom-control custom-checkbox">
           <input checked={isSelectAll} type="checkbox" className="custom-control-input" />
@@ -23,15 +22,12 @@ const UserList = ({ data, isSelectAll}) => {
       </td>
       <td>{phone}</td>
       <td>{email}</td>
-      <td>
+      <td className='action-btn-container'>
         <Link to={`/edit_user/${id}`}>
-          <MdModeEdit className="btn-action btn-action-edit" />
+          <button className="edit-user"><i class="fas fa-pen-nib"></i>Edit</button>
         </Link>
 
-        <AiFillDelete
-          onClick={() => dispatch(deleteUser(id))}
-          className="btn-action btn-action-delete"
-        />
+        <button className="delete-user" onClick={() => dispatch(deleteUser(id))}><i class="fas fa-trash"></i>Delete</button>
       </td>
     </tr>
   );

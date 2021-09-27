@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles/style.css'
 import Contact from './components/Contact'
 import NewContact from './components/NewContact'
 import EditContact from './components/EditContact'

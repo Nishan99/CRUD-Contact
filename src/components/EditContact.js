@@ -87,7 +87,7 @@ const EditContact = () => {
             />
           </div>
           <div className="form-group my-3">
-            <button className="btn btn-danger" type="submit">
+            <button className="btn btn-danger" type="submit"><i class="fas fa-pen-nib"></i>
               Edit User
             </button>
           </div>

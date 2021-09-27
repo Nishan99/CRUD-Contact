@@ -9,7 +9,7 @@ function Contact() {
   return (
     <table className="table shadow container">
       <thead>
-        <tr>
+        <tr className='table-heading-title'>
           <th>
             <div className="custom-control custom-checkbox">
               <input
